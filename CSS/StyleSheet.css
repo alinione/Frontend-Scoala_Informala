@@ -1,0 +1,57 @@
+h1 {
+				background-color: aqua;
+				color: darkblue;
+			}
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			.highlight.button{
+				/*ambele clase in acelasi timp; nu conteaza ordinea*/
+			}
+			.highlight.darkcolor{
+				/*ambele clase in acelasi timp; nu conteaza ordinea*/
+			}
+			.parinte .copil{
+				/*ce este pana la spatiu este un selector pentru parinte
+				  ce este dupa spatiu este un selecotr pentru copil/copii*/
+			}
+			.parinte div{
+
+			}
+			#nav-menu .nav-menu-item .icon{
+				/*parinte-parinte-copil*/
+			}
+			#nav-menu>.nav-menu-tem>.icon{
+				/*cauta in primul copil de sub parinte*/
+			}
+			#nav-menu .nav-manu-item:hover{
+				background-color: darkgreen;
+				color: white;
+			}
+			a, a:link, a:visited, a:active {
+				color: blue;
+			}
+			.highlight {
+				font-size: 20px;
+				line-height: 40px;
+				font-weight: bold;
+			}
+			.darkcolor {
+				background-color: black;
+				color: white;
+			}
+			#nav-menu{
+				background-color: green;
+			}
+			.nav-menu-item{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				border: 1px inset orange;
+				border-radius: 20px;
+				padding: 5px;
+				margin:3px;
+				font-size: 1em;
+			}
+
