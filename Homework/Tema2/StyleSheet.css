@@ -1,25 +1,25 @@
-.container {
+.container{
 	padding: 0px 30px;
 	margin: 0 auto;
 	display: block;
 	max-width: 1050px;
 
 }
-.div1 {
+.div1{
 	display: inline-block;
 	text-align: center;
 	padding: 15px;
-}
-.poza {
+}	
+.poza{
 	width: 300px;
 	height: 350px;
 }
-.text1 {
+.text1{
 	font-family:  Muli;
 	font-size: 20px;
 	display: block;
 }
-.fa-star {
+.fa-star{
 	color: orange;
 	padding: 5px 5px;
 }
@@ -60,6 +60,3 @@ button.button2{
 	font-family: Muli;
 	border-color: black;
 }
-
-
-
