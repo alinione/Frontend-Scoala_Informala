@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tema1</title>
+		<script>
+			function equals(a,b) {
+				if (a === b) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			console.log("equals(3,4)", equals(3,4));
+
+			function compare(a,b) {
+				if (a < b) {
+					return -1;
+				}
+				if (a === b) {
+					return 0;
+				} else if (a > b) {
+					return 1;
+				}
+			}
+			console.log("compare(3,4)", compare(3,4));
+
+			function max(a,b) {
+				if (a > b) {
+					return a;
+				}
+				if (a < b) {
+					return b;
+				} else if (a === b) {
+					return a || b;
+				}
+			}
+			console.log("max(5,6)", max(5,6));
+
+			function min(a,b) {
+				if (a < b) {
+					return a;
+				}
+				if (b < a) {
+					return b;
+				} else if (a === b) {
+					return a || b;
+				}
+			}
+			console.log("min(5,6)", min(5,6));
+
+			function suma(n) {
+				let sum = 0;
+				for (let i=1; i<=n; i++) {
+					sum = sum+i;
+				}
+				return sum;
+			}
+			console.log("suma(3)", suma(3));
+
+			function prim(n) {
+  				for(let i = 2; i < n; i++) {
+    				if (n % i === 0) {
+    					return false;
+    				} 
+    			}
+  				return n > 1;
+			}
+			console.log("prim(3)", prim(3));
+
+			function sumaPrime(n) {
+				var sum = 0;
+				var ct = 0;
+
+				for (let i = 2; ct < n; i++) {
+					if (prim(i) ) {
+						ct++
+						sum += i;
+					}
+				}
+
+				return sum;
+			}
+			
+			console.log("sumaPrime(20)", sumaPrime(20));
+
+		   function invers(n) {
+			    var digit, result = 0
+			    
+			    while(n) {
+			        digit = n % 10;  
+			        result = (result * 10) + digit;  
+			        n = Math.floor (n/10);  
+			    } 
+
+			    return result;
+			}
+			console.log("invers(123)", invers(123));
+
+			function produsImpare(n) {
+				var prod = 1;
+				for (let i = 1; i <=2*n-1; i+=2) {
+				prod = prod * i			
+				}
+				return prod;
+			}
+			console.log("produsImpare(5)", produsImpare(5));
+
+			function contains(arr,x) {
+				for (var i = 0; i < arr.length; i++) {
+    			if (arr[i] === x) {
+        			return true;
+    				}
+				}
+				return false;
+				}
+				console.log("contains([1, 2, 5, 8, 33, 44], 8)", contains([1, 2, 5, 8, 33, 44], 8));
+
+			function maxArray(arr) {
+				var maxArray = arr [0];
+				for (let i = 1; i < arr.length; i++) {
+					if (arr [i] > maxArray) {
+						maxArray = arr [i];
+					}
+				}
+				return maxArray;
+			}
+			console.log("maxArray([7, 9, 33, 25, 38, 1, 5])", maxArray([7, 9, 33, 25, 38, 1, 5]));
+
+			function sumMinMax(array) {
+				var maxArray = array [0];
+				var minArray = array [0];
+				for (let i = 1; i < array.length; i++) {
+					if (array [i] > maxArray) {
+						maxArray = array [i];
+					}
+					if (array [i] < minArray){
+						minArray = array [i];
+					}
+				}
+				return minArray + maxArray;
+			}
+			console.log("sumMinMax([1, 2, 5, 8, 33, 44, 4, 5])", sumMinMax([1, 2, 5, 8, 33, 44, 4, 5]));
+
+			function hasDuplicates(arrayD) {
+				var c = [];
+				for (let i = 0; i <= arrayD.length; i++) {
+    				if (c[arrayD[i]] === undefined) {
+        				c[arrayD[i]] = 1;
+    				} else {
+        				return true;
+    					}	
+					}
+					return false;
+				}
+				console.log("hasDuplicates([1, 1, 2, 4, 5, 7, 9])", hasDuplicates([1, 1, 2, 4, 5, 7, 9]));
+
+				function produsPozitive(arrayP) {
+					var prod = 1;
+					for (let i = 0; i < arrayP.length; i++) {
+						if (arrayP[i] > 0) {
+							prod = prod * arrayP[i]
+							}
+						}
+						return prod;
+				}
+				console.log("produsPozitive([-1, -4, 5, 6, 9, 15])", produsPozitive([-1, -4, 5, 6, 9, 15]));
+
+				function palindrom(arrayPal) {    
+					var l = arrayPal.length;
+					for (var i = 0; i < l / 2; i++) {
+    					if (arrayPal[i] != arrayPal[l - (i + 1)]) {
+        					return false;
+    						}
+						}
+						return true;
+				}
+				console.log('palindrom(["level"])', palindrom(["level"]));
+	</script>
+</head>
+</html>

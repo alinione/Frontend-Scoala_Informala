@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Variabile</title>
+		<script>
+			var array=[3,6,7,8,1,2,4,99,8,6,4,3,2,6];
+			for (let i=0;  i < array.length; i++) {
+				if (array[i] % 2 === 0) {
+					console.log(array[i]) ;
+				}
+			}
+			function pow(a,b) {
+				var p=1;
+				for (let i = 0; i < b; i++) {
+					p *=a;
+				}
+				return p;
+			}
+			console.log(p)
+			console.log("pow(2,3))", pow(2,3));
+
+
+
+			function tablaInmultirii(x) {
+				for(let i=1; i<=10; i++) {
+					console.log (x+ "x"+i+"="+(x*i));
+				}
+			}
+			tablaInmultirii(7);
+
+
+			var n = 6
+			
+			function triunghi() {
+				const n = 2
+				for(let i=1; i<=n; i++) {
+					let str = "";
+					for(let j=0; j<i; j++) {
+						str+=i;
+					}
+					console.log(str);
+				}
+			}
+			
+			triunghi()
+
+
+
+			function fibonaci(n){
+				let a = 1;
+				let b = 1;
+				let c = a+b;
+				for(let i =2; i < n; i++) {
+				c = a + b;
+				a = b;
+				b = c;
+			}
+				return c;
+			}
+			console.log(fibonaci(1));
+			console.log(fibonaci(2));
+			console.log(fibonaci(3));
+			console.log(fibonaci(4));
+
+			function pretulCorect(a,b,x) {
+				//x-a
+				//x-b
+				//care diferenta este mai aproape de 0
+				let difA = x - a;
+				let difB = x - b;
+				if(difA<0) {
+					difA *= -1
+				}
+				if (difA < difB) {
+					difB *= -1
+				}
+				if (difA < difB) {
+					return a;
+				} else {
+					return b;
+				}
+			}
+			console.log(pretulCorect(5,100,1));
+			console.log(pretulCorect(5,100,30));
+			console.log(pretulCorect(5,100,70));
+			console.log(pretulCorect(5,100,170));	
+
+
+			function numeComplet (nume, initiala, prenume, numeNastere) {
+				if(nume === numeNastere) {
+					return nume+" "+initiala[0]+". "+prenume;
+				} else {
+					return nume+" "+initiala[0]+". "+prenume+" ("+numeNastere+")";
+				}
+			}
+			console.log(numeComplet("Popescu","Ionut","Ion","Popescu"));
+			console.log(numeComplet("Popescu","Ionut","Ion","Popescu"));	
+		</script>
+	</head>
+</html>
